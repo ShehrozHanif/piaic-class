@@ -20,4 +20,15 @@ function sum(num1, num2) {
     return num1 + num2;
 }
 console.log(sum(2, 2));
+let car1 = {
+    name: "Corolla",
+    modelYear: 2024,
+    color: "Red Wine",
+    HP: "2200 Cc",
+    carType: "Automatic",
+    isPowerSterring: true
+};
+// console.log(car1.name)
+let drinks = "sheesha";
 export {};
+// type intersection

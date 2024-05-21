@@ -28,3 +28,38 @@ function sum(num1:number, num2:number){
 }
 
 console.log(sum(2,2))
+
+
+type car = {
+    name:string,
+    modelYear:number,
+    color:string,
+    HP:string,
+    carType:"Manual"|"Automatic"|"Electric",  // This is Union type in which you can select one frrom optional field
+    isPowerSterring:boolean
+}
+
+let car1:car={
+    name:"Corolla",
+    modelYear:2024,
+    color:"Red Wine",
+    HP:"2200 Cc",
+    carType:"Automatic",
+    isPowerSterring:true
+}
+
+// console.log(car1.name)
+
+let drinks: "pepsi"|"limca"|"sheesha" = "sheesha"
+
+type student ={
+    name:string
+    rollNumber:number
+}
+
+type teacher = {
+    name:student
+    exp:number
+}
+
+// type intersection
