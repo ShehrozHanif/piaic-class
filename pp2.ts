@@ -210,7 +210,103 @@ console.log(array, "Remove peach from an Array")
 //Quesyion No 2:
 //Matrix is remeaining
 
+// Working with Multidimentional Arrays
+//Define a 3x3 matrix of numbers as a multidimentional array.Write functions to:
 
+// . Print the Diagonal elements of the matrix.
+// . Calculate the sum of all elements in the matrix.
+
+let matrix: number[][] = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+];
+
+/*
+.matrix[i][i] accesses the element at the ith row and the ith column of the matrix.
+.In a 3x3 matrix, the main diagonal elements are at positions (0,0), (1,1), and (2,2).
+.console.log(matrix[i][i]) prints the diagonal element to the console.
+
+*/
+function printDiagonalElements(matrix: number[][]): void {
+    console.log("Diagonal Elements:");
+    for (let i = 0; i < matrix.length; i++) {
+        console.log(matrix[i][i]);
+    }
+}
+/*
+First Iteration (i = 0):
+
+matrix[0][0] is 1.
+The function prints 1.
+Second Iteration (i = 1):
+ 
+matrix[1][1] is 5.
+The function prints 5.
+Third Iteration (i = 2):
+
+matrix[2][2] is 9.
+The function prints 9.
+So, the output of the function will be:
+
+*/
+// Calling the function
+printDiagonalElements(matrix);
+
+
+
+
+function calculateSumOfElements(matrix: number[][]): number {
+    let sum: number = 0;
+    for (let i = 0; i < matrix.length; i++) {
+        for (let j = 0; j < matrix[i].length; j++) {
+            sum += matrix[i][j];
+        }
+    }
+    return sum;
+}
+
+// Calling the function and printing the result
+let sum = calculateSumOfElements(matrix);
+console.log("Sum of all elements in the matrix:", sum);
+
+
+/*
+First Outer Loop Iteration (i = 0):
+
+First Inner Loop Iteration (j = 0):
+matrix[0][0] is 1.
+sum becomes 0 + 1 = 1.
+Second Inner Loop Iteration (j = 1):
+matrix[0][1] is 2.
+sum becomes 1 + 2 = 3.
+Third Inner Loop Iteration (j = 2):
+matrix[0][2] is 3.
+sum becomes 3 + 3 = 6.
+Second Outer Loop Iteration (i = 1):
+
+First Inner Loop Iteration (j = 0):
+matrix[1][0] is 4.
+sum becomes 6 + 4 = 10.
+Second Inner Loop Iteration (j = 1):
+matrix[1][1] is 5.
+sum becomes 10 + 5 = 15.
+Third Inner Loop Iteration (j = 2):
+matrix[1][2] is 6.
+sum becomes 15 + 6 = 21.
+Third Outer Loop Iteration (i = 2):
+
+First Inner Loop Iteration (j = 0):
+matrix[2][0] is 7.
+sum becomes 21 + 7 = 28.
+Second Inner Loop Iteration (j = 1):
+matrix[2][1] is 8.
+sum becomes 28 + 8 = 36.
+Third Inner Loop Iteration (j = 2):
+matrix[2][2] is 9.
+sum becomes 36 + 9 = 45.
+So, the sum of all elements in the matrix is 45
+ */
 
 
 //Question No 3:

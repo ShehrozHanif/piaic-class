@@ -149,8 +149,8 @@ function randomNumber(userInput:number){
 
 }
 
-// let check2 = randomNumber(7)
-// console.log(`It took ${check2} attempts`)
+let check2 = randomNumber(7)
+console.log(`It took ${check2} attempts`)
 
 
 import prompt from "inquirer/lib/ui/prompt.js";
@@ -229,3 +229,85 @@ function countDown(number:number){
 
 let check3 = countDown(10)
 console.log(check3)
+//undefine
+
+type person ={
+    bio:{
+        name:string,
+        age:number,
+        gender:string,
+        email:string
+    }
+    address:{
+        street:number,
+        houseNo:string,
+        location:string,
+    }
+    greet: ()=>void;
+}
+
+let person1:person={
+    bio:{
+        name:"Shehroz Hanif",
+        age:25,
+        gender:"male",
+        email:"Shehrozhanif54@gmail.com"
+    },
+    address:{
+        street:1,
+        houseNo:"3",
+        location:"Gulistn-e-juhar Perfume chock",
+    },
+    greet:function(){
+        console.log("Hello Shehroz")
+    }
+}
+
+console.log(person1.greet())
+
+//Same case undefine
+
+
+//Question no 6
+//Enums for Days of the week.Write a function that takes a day as an argument and return "Weekend" if its Saturday or Sunday and "Weekday" for other days
+enum Day {
+    Monday,
+    Tuesday,
+    Wednesday,
+    Thursday,
+    Friday,
+    Saturday,
+    Sunday
+} 
+
+function checkDay(day:Day){
+    if(day === Day.Saturday || day === Day.Sunday){
+        return "Weekend"
+    }else{
+        return "WeekDay"
+    }
+}
+
+let check = Day.Sunday
+console.log(checkDay(check))
+
+
+
+// Question no 7
+// Tuples for Rgb colors
+// Deine a tuple type for RGB color values.Write a fnction that takes an RGB tuple as an argument and returns a string describing the color.
+
+// Define tuple type for RGB color values
+type RGBColor = [number, number, number];
+
+// Function to describe the color based on RGB tuple
+function describeColor(rgb: RGBColor): string {
+    const [red, green, blue] = rgb;
+    return `The color is R:${red}, G:${green}, B:${blue};`
+}
+
+// Example usage
+const color: RGBColor = [255, 0, 0]; // Red color
+console.log(describeColor(color));
+
+

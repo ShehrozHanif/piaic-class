@@ -113,6 +113,8 @@ function randomNumber(userInput) {
         }
     } while (true);
 }
+let check2 = randomNumber(7);
+console.log(`It took ${check2} attempts`);
 // let input = await inquirer.prompt([
 //     {
 //         name:"Guessgame",
@@ -162,4 +164,52 @@ function countDown(number) {
 }
 let check3 = countDown(10);
 console.log(check3);
+let person1 = {
+    bio: {
+        name: "Shehroz Hanif",
+        age: 25,
+        gender: "male",
+        email: "Shehrozhanif54@gmail.com"
+    },
+    address: {
+        street: 1,
+        houseNo: "3",
+        location: "Gulistn-e-juhar Perfume chock",
+    },
+    greet: function () {
+        console.log("Hello Shehroz");
+    }
+};
+console.log(person1.greet());
+//Same case undefine
+//Question no 6
+//Enums for Days of the week.Write a function that takes a day as an argument and return "Weekend" if its Saturday or Sunday and "Weekday" for other days
+var Day;
+(function (Day) {
+    Day[Day["Monday"] = 0] = "Monday";
+    Day[Day["Tuesday"] = 1] = "Tuesday";
+    Day[Day["Wednesday"] = 2] = "Wednesday";
+    Day[Day["Thursday"] = 3] = "Thursday";
+    Day[Day["Friday"] = 4] = "Friday";
+    Day[Day["Saturday"] = 5] = "Saturday";
+    Day[Day["Sunday"] = 6] = "Sunday";
+})(Day || (Day = {}));
+function checkDay(day) {
+    if (day === Day.Saturday || day === Day.Sunday) {
+        return "Weekend";
+    }
+    else {
+        return "WeekDay";
+    }
+}
+let check = Day.Sunday;
+console.log(checkDay(check));
+// Function to describe the color based on RGB tuple
+function describeColor(rgb) {
+    const [red, green, blue] = rgb;
+    return `The color is R:${red}, G:${green}, B:${blue};`;
+}
+// Example usage
+const color = [255, 0, 0]; // Red color
+console.log(describeColor(color));
 export {};

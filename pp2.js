@@ -111,6 +111,18 @@ console.log("Index of a Fruit is ", findIndex);
 // we know index is 2 that we appli .splice Method
 let removeFruit = array.splice(2, 1);
 console.log(array, "Remove peach from an Array");
+//Quesyion No 2:
+//Matrix is remeaining
+// Working with Multidimentional Arrays
+//Define a 3x3 matrix of numbers as a multidimentional array.Write functions to:
+// . Print the Diagonal elements of the matrix.
+// . Calculate the sum of all elements in the matrix.
+const matrix = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8]
+];
+console.log(matrix[1][2]);
 let library2 = [
     { author: "JamnaDas Marfatiya", title: "Wifi me Lag gayi aag", publishedYear: 2005 },
     { author: "Dhiru bhai", title: "Laga chunni me daag", publishedYear: 2000 }
