@@ -117,12 +117,53 @@ console.log(array, "Remove peach from an Array");
 //Define a 3x3 matrix of numbers as a multidimentional array.Write functions to:
 // . Print the Diagonal elements of the matrix.
 // . Calculate the sum of all elements in the matrix.
-const matrix = [
-    [0, 1, 2],
-    [3, 4, 5],
-    [6, 7, 8]
+let matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
 ];
-console.log(matrix[1][2]);
+/*
+.matrix[i][i] accesses the element at the ith row and the ith column of the matrix.
+.In a 3x3 matrix, the main diagonal elements are at positions (0,0), (1,1), and (2,2).
+.console.log(matrix[i][i]) prints the diagonal element to the console.
+
+*/
+function printDiagonalElements(matrix) {
+    console.log("Diagonal Elements:");
+    for (let i = 0; i < matrix.length; i++) {
+        console.log(matrix[i][i]);
+    }
+}
+/*
+First Iteration (i = 0):
+
+matrix[0][0] is 1.
+The function prints 1.
+Second Iteration (i = 1):
+ 
+matrix[1][1] is 5.
+The function prints 5.
+Third Iteration (i = 2):
+
+matrix[2][2] is 9.
+The function prints 9.
+So, the output of the function will be:
+
+*/
+// Calling the function
+printDiagonalElements(matrix);
+function calculateSumOfElements(matrix) {
+    let sum = 0;
+    for (let i = 0; i < matrix.length; i++) {
+        for (let j = 0; j < matrix[i].length; j++) {
+            sum += matrix[i][j];
+        }
+    }
+    return sum;
+}
+// Calling the function and printing the result
+let sum = calculateSumOfElements(matrix);
+console.log("Sum of all elements in the matrix:", sum);
 let library2 = [
     { author: "JamnaDas Marfatiya", title: "Wifi me Lag gayi aag", publishedYear: 2005 },
     { author: "Dhiru bhai", title: "Laga chunni me daag", publishedYear: 2000 }
