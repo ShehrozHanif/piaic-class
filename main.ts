@@ -191,7 +191,7 @@ let students:{name:string,age:number,qualification:string}[]=[
 // let filterStd = students.filter(students =>students.age === 28)
 // console.log(filterStd)
 
-console.log(students[1].name)
+// console.log(students[1].name)
 
 
 //Try to make a calculator
@@ -229,4 +229,69 @@ import inquirer from "inquirer"
 //     }
 // }
 
+// function type pizzacb:()=>void    // you can use this
+let makeOrder=(pizzacb:any)=>{
+    setTimeout(() => {
+        console.log("Order is place")
+        pizzacb()
+    }, 2000);
+}
 
+let pizzComplete=()=>{
+    setTimeout(() => {
+       console.log("Order is ready to deliver") 
+    }, 5000);
+}
+
+// makeOrder(pizzComplete)
+
+//callback hell
+// function k under function us k under function us k under function 
+// in se bachne k liye promise use huye
+
+
+let plzaceOrder =()=>{
+    return new Promise((resolve) => {   // special function
+        setTimeout(() => {
+            console.log("order is placed")
+            resolve("");
+        }, 3000);
+    })
+}
+
+let preparePizza =()=>{
+
+   return new Promise((resolve,reject) => {
+        setTimeout(() => {
+            let isopen = false
+            if(isopen){
+                console.log("pizza is prepare")
+                resolve("")
+            }else{
+                reject("close")
+            }
+            
+            
+        }, 3000);
+    })
+   
+}
+
+let pizzaDeliver =()=>{
+    setTimeout(() => {
+        console.log("pizza is deliver")
+    },5000);
+}
+
+
+plzaceOrder().then(preparePizza).then(pizzaDeliver).catch((err)=>{
+    console.log(err)
+    console.log("shop is close")
+})
+
+
+/**
+ Write a function simulateTask that simulates a task by logging "Task started",
+waits for 1 second, and then logs "Task completed". Use setTimeout for the delay.
+
+*/

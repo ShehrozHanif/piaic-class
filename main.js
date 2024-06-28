@@ -132,7 +132,6 @@ let students = [
 // let filterStd = students.filter(students =>students.age === 28)
 // console.log(filterStd)
 console.log(students[1].name);
-export {};
 // let user = await inquirer.prompt([
 //     {
 //         name:"input1",
@@ -164,3 +163,51 @@ export {};
 //      console.log(user.input1 / user.input2)
 //     }
 // }
+// function type pizzacb:()=>void    // you can use this
+let makeOrder = (pizzacb) => {
+    setTimeout(() => {
+        console.log("Order is place");
+        pizzacb();
+    }, 2000);
+};
+let pizzComplete = () => {
+    setTimeout(() => {
+        console.log("Order is ready to deliver");
+    }, 5000);
+};
+// makeOrder(pizzComplete)
+//callback hell
+// function k under function us k under function us k under function 
+// in se bachne k liye promise use huye
+let plzaceOrder = () => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            console.log("order is placed");
+            resolve("");
+        }, 3000);
+    });
+};
+let preparePizza = () => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            let isopen = false;
+            if (isopen) {
+                console.log("pizza is prepare");
+                resolve("");
+            }
+            else {
+                reject("close");
+            }
+        }, 3000);
+    });
+};
+let pizzaDeliver = () => {
+    setTimeout(() => {
+        console.log("pizza is deliver");
+    }, 5000);
+};
+plzaceOrder().then(preparePizza).then(pizzaDeliver).catch((err) => {
+    console.log(err);
+    console.log("shop is close");
+});
+export {};

@@ -105,6 +105,7 @@ function trafficSignal(signal) {
         console.log("You can go now");
     }
 }
+export {};
 // type deal2 = {
 //     food:string
 // }
@@ -117,28 +118,25 @@ function trafficSignal(signal) {
 // }
 // let serveOrderToShehroz:deal1 = husnaninOrder  // error occur because one property is missing
 // let serveOrderToHasnain:deal2 = shehrozOrder   // these are stale object because its allow to add proprty
-const maxValue = 10;
-const randomNumber = Math.floor(Math.random() * 10) + 1;
-let isGuessCorrect = false; // Track the initial status false
-const guesses = [2, 6, 5, 8, 7];
-let index = 0; // initialization
-while (index < guesses.length) {
-    const currentGuess = guesses[index];
-    console.log(`User guess ${currentGuess}`);
-    if (currentGuess === randomNumber) {
-        console.log(`!Bingo the number is matach`);
-        isGuessCorrect = true;
-        break;
-    }
-    else if (currentGuess > randomNumber) {
-        console.log(`Too high`);
-    }
-    else {
-        console.log(`Less than random number`);
-    }
-    index++;
-}
-if (!isGuessCorrect) {
-    console.log("No more guesses left");
-}
-export {};
+// const maxValue = 10;
+// const randomNumber = Math.floor(Math.random()*10)+1;
+// let isGuessCorrect = false  // Track the initial status false
+// const guesses = [2,6,5,8,7]
+// let index = 0  // initialization
+// while(index<guesses.length){
+//     const currentGuess = guesses[index]
+//     console.log(`User guess ${currentGuess}`)
+//     if(currentGuess === randomNumber){
+//         console.log(`!Bingo the number is matach`)
+//         isGuessCorrect = true
+//         break;
+//     }else if(currentGuess > randomNumber){
+//         console.log(`Too high`)
+//     }else{
+//         console.log(`Less than random number`)
+//     }
+//     index++
+// }
+// if(!isGuessCorrect){
+//     console.log("No more guesses left")
+// }
